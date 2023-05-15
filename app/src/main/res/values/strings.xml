@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Vamos rachar</string>
+    <string name="valorTotal">0</string>
+    <string name="valorPessoa">0.00</string>
 </resources>
