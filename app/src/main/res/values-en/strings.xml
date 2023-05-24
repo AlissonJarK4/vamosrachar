@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="vamos_rachar">Lets Rachar?</string>
+    <string name="r">$</string>
+    <string name="bot_o_compartilhar">Share</string>
+    <string name="bot_o_falar">Speak</string>
+    <string name="quantidade_de_pessoas_min_1">People count(min 1)</string>
+    <string name="para_cada_pessoa_fica">Each one pays:</string>
+    <string name="valor_total">Total Value</string>
+</resources>

@@ -4,37 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
+    android:layout_marginTop="8dp"
+    app:autoSizeTextType="uniform"
     app:layout_constraintEnd_toEndOf="parent"
-    tools:context=".MainActivity"
-    app:autoSizeTextType="uniform" >
+    app:layout_constraintHorizontal_bias="1.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:context=".MainActivity">
+
+    <!--    android:contentDescription="Valor por pessoa"-->
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="4dp"
         android:text="@string/vamos_rachar"
         android:textColor="@color/purple_700"
         android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/qtdPessoas"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.728"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
 
     <TextView
         android:id="@+id/rs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="108dp"
-        android:layout_marginBottom="68dp"
+        android:layout_marginStart="236dp"
+        android:layout_marginBottom="8dp"
         android:inputType="number"
         android:text="@string/r"
         android:textSize="48sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnSpeak"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <!--    android:contentDescription="Valor por pessoa"-->
+        app:layout_constraintBottom_toTopOf="@+id/btnShare"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/valorTotal"
+        app:layout_constraintVertical_bias="0.5" />
 
     <TextView
         android:id="@+id/valorPessoa"
@@ -42,84 +49,96 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="200dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginBottom="68dp"
+        android:layout_marginBottom="8dp"
         android:inputType="number"
         android:text="@string/valorPessoa"
         android:textSize="48sp"
         app:layout_constraintBottom_toTopOf="@+id/btnSpeak"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/rs" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/rs"
+        app:layout_constraintTop_toBottomOf="@+id/qtdPessoas"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <!--    android:contentDescription="Valor total"-->
 
     <EditText
         android:id="@+id/qtdPessoas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="70dp"
+        android:layout_marginBottom="4dp"
         android:ems="10"
         android:inputType="number"
         android:minHeight="48dp"
         android:text="1"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toEndOf="@+id/valorTotal"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.5" />
 
     <EditText
         android:id="@+id/valorTotal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginStart="180dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:text="@string/valorTotal"
-        app:layout_constraintBottom_toTopOf="@+id/qtdPessoasLabel"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-<!--    android:contentDescription="Valor total"-->
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.5" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnShare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="100dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="44dp"
         android:clickable="true"
+        android:contentDescription="@string/bot_o_falar"
+        app:autoSizeTextType="uniform"
         app:backgroundTint="@color/purple_500"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnSpeak"
+        app:layout_constraintHorizontal_bias="0.675"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rs"
+        app:layout_constraintVertical_bias="0.5"
         app:rippleColor="#FAF5F5"
-        app:srcCompat="@android:drawable/ic_menu_share"
-        android:contentDescription="@string/bot_o_falar"
-        app:autoSizeTextType="uniform"/>
+        app:srcCompat="@android:drawable/ic_menu_share" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/btnSpeak"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="68dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="44dp"
         android:clickable="true"
+        android:contentDescription="@string/bot_o_compartilhar"
+        app:autoSizeTextType="uniform"
         app:backgroundTint="@color/purple_500"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
-        android:contentDescription="@string/bot_o_compartilhar"
-        app:autoSizeTextType="uniform"/>
+        app:layout_constraintTop_toBottomOf="@+id/valorPessoa"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="4dp"
         android:text="@string/para_cada_pessoa_fica"
-        app:layout_constraintBottom_toTopOf="@+id/rs"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.632"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/qtdPessoas"
+        app:layout_constraintVertical_bias="0.5" />
 
     <TextView
         android:id="@+id/qtdPessoasLabel"
@@ -128,20 +147,20 @@
         android:text="@string/quantidade_de_pessoas_min_1"
         app:layout_constraintBottom_toTopOf="@+id/qtdPessoas"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.461"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.817"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5032dp"
         android:text="@string/valor_total"
         app:layout_constraintBottom_toTopOf="@+id/valorTotal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.316"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
